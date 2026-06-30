@@ -27,9 +27,8 @@
 </head>
 
 <body>
-
   <div id="ayuda">
-    Apuntá la cámara a un marcador geométrico impreso.
+    Apuntá la cámara a un marcador impreso. Cada símbolo activa una imagen distinta.
   </div>
 
   <a-scene embedded
@@ -45,33 +44,42 @@
       <img id="camiseta" src="assets/camiseta.png" crossorigin="anonymous">
     </a-assets>
 
-    <a-marker type="pattern" url="assets/pattern-circulo.patt" smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+    <!-- CÍRCULO CON LÍNEA DIAGONAL → BANDERA -->
+    <a-marker type="pattern" url="assets/pattern-c%C3%ADrculo%20con%20l%C3%ADnea%20diagonal.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
       <a-image src="#bandera" position="0 0.05 0" rotation="-90 0 0" width="1.8" height="1.15" transparent="true"></a-image>
       <a-text value="Bandera Argentina" position="0 -0.85 0.05" rotation="-90 0 0" align="center" color="#111111" width="2"></a-text>
     </a-marker>
 
-    <a-marker type="pattern" url="assets/pattern-triangulo.patt" smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+    <!-- TRIÁNGULO CON PUNTO → ESCUDO -->
+    <a-marker type="pattern" url="assets/pattern-tri%C3%A1ngulo%20con%20punto.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
       <a-image src="#escudo" position="0 0.05 0" rotation="-90 0 0" width="1.25" height="1.25" transparent="true"></a-image>
       <a-text value="Escudo Argentino" position="0 -0.85 0.05" rotation="-90 0 0" align="center" color="#111111" width="2"></a-text>
     </a-marker>
 
-    <a-marker type="pattern" url="assets/pattern-cuadrado.patt" smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+    <!-- CUADRADO CON CRUZ → ESCARAPELA -->
+    <a-marker type="pattern" url="assets/pattern-cuadrado%20con%20cruz.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
       <a-image src="#escarapela" position="0 0.05 0" rotation="-90 0 0" width="1.25" height="1.25" transparent="true"></a-image>
       <a-text value="Escarapela Argentina" position="0 -0.85 0.05" rotation="-90 0 0" align="center" color="#111111" width="2"></a-text>
     </a-marker>
 
-    <a-marker type="pattern" url="assets/pattern-rombo.patt" smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+    <!-- ROMBO CON DOS LÍNEAS → ACTA -->
+    <a-marker type="pattern" url="assets/pattern-rombo%20con%20dos%20l%C3%ADneas.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
       <a-image src="#acta" position="0 0.08 0" rotation="-90 0 0" width="1.05" height="1.45" transparent="true"></a-image>
       <a-text value="Acta de la Independencia" position="0 -0.95 0.05" rotation="-90 0 0" align="center" color="#111111" width="2"></a-text>
     </a-marker>
 
-    <a-marker type="pattern" url="assets/pattern-hexagono.patt" smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+    <!-- HEXÁGONO CON ESTRELLA → CAMISETA -->
+    <a-marker type="pattern" url="assets/pattern-hex%C3%A1gono%20con%20estrella.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
       <a-image src="#camiseta" position="0 0.08 0" rotation="-90 0 0" width="1.15" height="1.35" transparent="true"></a-image>
       <a-text value="Camiseta Argentina" position="0 -0.95 0.05" rotation="-90 0 0" align="center" color="#111111" width="2"></a-text>
     </a-marker>
 
     <a-entity camera></a-entity>
   </a-scene>
-
 </body>
 </html>
