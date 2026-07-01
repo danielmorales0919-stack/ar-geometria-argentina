@@ -48,6 +48,8 @@
       <img id="escarapela" src="assets/escarapela.png" crossorigin="anonymous">
       <img id="acta" src="assets/acta.png" crossorigin="anonymous">
       <img id="camiseta" src="assets/camiseta.png" crossorigin="anonymous">
+
+      <a-asset-item id="chupetin" src="assets/chupetin.glb"></a-asset-item>
     </a-assets>
 
     <!-- CÍRCULO → BANDERA -->
@@ -157,6 +159,27 @@
 
       <a-text
         value="Camiseta Argentina"
+        position="0 -0.95 0.05"
+        rotation="-90 0 0"
+        align="center"
+        color="#111111"
+        width="2">
+      </a-text>
+    </a-marker>
+
+    <!-- CHUPETÍN 3D -->
+    <a-marker type="pattern" url="assets/pattern-chupetin.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+
+      <a-entity
+        gltf-model="#chupetin"
+        position="0 0 0"
+        rotation="-90 0 0"
+        scale="0.5 0.5 0.5">
+      </a-entity>
+
+      <a-text
+        value="Chupetin 3D"
         position="0 -0.95 0.05"
         rotation="-90 0 0"
         align="center"
