@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>AR Geometría Argentina</title>
+  <title>Argentina Aumentada</title>
 
   <script src="https://cdn.jsdelivr.net/npm/aframe@1.8.0/dist/aframe-master.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/build/aframe-ar.js"></script>
@@ -34,7 +34,7 @@
 <body>
 
   <div id="ayuda">
-    Apuntá la cámara a un marcador impreso.
+    Exploradores de Símbolos Patrios en Realidad Aumentada
   </div>
 
   <a-scene embedded
@@ -49,6 +49,7 @@
       <img id="escarapela" src="assets/escarapela.png" crossorigin="anonymous">
       <img id="acta" src="assets/acta.png" crossorigin="anonymous">
       <img id="camiseta" src="assets/camiseta.png" crossorigin="anonymous">
+      <img id="carreta" src="assets/carreta.png" crossorigin="anonymous">
 
       <!-- MODELOS 3D GLB -->
       <a-asset-item id="chupetin" src="assets/chupetin.glb"></a-asset-item>
@@ -128,13 +129,27 @@
       </a-image>
     </a-marker>
 
+    <!-- CARRETA 2D -->
+    <a-marker type="pattern" url="assets/pattern-carretabasica.patt"
+      smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+
+      <a-image
+        src="#carreta"
+        position="0 0.08 0"
+        rotation="-90 0 0"
+        width="1.7"
+        height="1.1"
+        transparent="true">
+      </a-image>
+    </a-marker>
+
     <!-- CHUPETÍN 3D -->
     <a-marker type="pattern" url="assets/pattern-chupetin.patt"
       smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
 
       <a-entity
         gltf-model="#chupetin"
-        position="0 -2 0"
+        position="0 0 0"
         rotation="-90 0 0"
         scale="15 15 15">
       </a-entity>
@@ -147,7 +162,7 @@
       <a-entity
         gltf-model="#cofre"
         position="0 0 0"
-        rotation="45 180 45"
+        rotation="0 180 0"
         scale="1 1 1">
       </a-entity>
     </a-marker>
@@ -160,7 +175,7 @@
         gltf-model="#fubol"
         position="0 0 0"
         rotation="-90 0 0"
-        scale="0.5 0.5 0.5">
+        scale="15 15 15">
       </a-entity>
     </a-marker>
 
@@ -171,8 +186,8 @@
       <a-entity
         gltf-model="#mariposa"
         position="0 0 0"
-        rotation="0 90 0"
-        scale="17 17 17">
+        rotation="-90 0 0"
+        scale="15 15 15">
       </a-entity>
     </a-marker>
 
@@ -183,8 +198,8 @@
       <a-entity
         gltf-model="#mariposa2"
         position="0 0 0"
-        rotation="0 90 0"
-        scale="2 2 2">
+        rotation="-90 0 0"
+        scale="15 15 15">
       </a-entity>
     </a-marker>
 
